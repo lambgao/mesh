@@ -38,11 +38,12 @@
 	<!-- Miscellaneous other checks. -->
 	<!-- See http://checkstyle.sf.net/config_misc.html -->
 	<module name="RegexpSingleline">
-		<property name="format" value="\s+$" />
-		<property name="minimum" value="0" />
-		<property name="maximum" value="0" />
-		<property name="message" value="Line has trailing spaces." />
+		<!-- <property name="format" value="\s+$" /> -->
+		<!-- <property name="message" value="Line has trailing spaces." /> -->
+		<property name="format" value="System\.out\.println" />
+		<property name="message" value="System.out.println invoked!" />
 	</module>
+
 
 	<!-- Checks for Headers -->
 	<!-- See http://checkstyle.sf.net/config_header.html -->
@@ -55,10 +56,10 @@
 
 		<!-- Checks for Javadoc comments. -->
 		<!-- See http://checkstyle.sf.net/config_javadoc.html -->
-		<!-- <module name="JavadocMethod" /> -->
-		<!-- <module name="JavadocType" /> -->
-		<!-- <module name="JavadocVariable" /> -->
-		<!-- <module name="JavadocStyle" /> -->
+		<module name="JavadocMethod" />
+		<module name="JavadocType" />
+		<module name="JavadocVariable" />
+		<module name="JavadocStyle" />
 
 
 		<!-- Checks for Naming Conventions. -->
