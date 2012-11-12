@@ -48,8 +48,8 @@
 	<!-- Checks for Headers -->
 	<!-- See http://checkstyle.sf.net/config_header.html -->
 	<!-- <module name="Header"> -->
-	<!-- <property name="headerFile" value="${checkstyle.header.file}"/> -->
-	<!-- <property name="fileExtensions" value="java"/> -->
+	<!-- <property name="headerFile" value="src/main/resources/etc/header.txt" /> -->
+	<!-- <property name="fileExtensions" value="java" /> -->
 	<!-- </module> -->
 
 	<module name="TreeWalker">
@@ -88,7 +88,9 @@
 		<module name="LineLength">
 			<property name="max" value="180" />
 		</module>
-		<module name="MethodLength" />
+		<module name="MethodLength">
+			<property name="max" value="300" />
+		</module>
 		<module name="ParameterNumber" />
 
 
@@ -105,7 +107,7 @@
 		<module name="ParenPad" />
 		<module name="TypecastParenPad" />
 		<module name="WhitespaceAfter" />
-		<module name=" WhitespaceAround " />
+		<module name="WhitespaceAround" />
 
 
 		<!-- Modifier Checks -->
@@ -126,15 +128,19 @@
 		<!-- Checks for common coding problems -->
 		<!-- See http://checkstyle.sf.net/config_coding.html -->
 		<module name="AvoidInlineConditionals" />
-		<module name="DoubleCheckedLocking" />    <!-- MY FAVOURITE -->
+		<module name="DoubleCheckedLocking" />
 		<module name="EmptyStatement" />
 		<module name="EqualsHashCode" />
-		<!-- <module name="HiddenField" /> -->
+		<module name="HiddenField" />
 		<module name="IllegalInstantiation" />
 		<module name="InnerAssignment" />
 		<module name="MagicNumber" />
 		<module name="MissingSwitchDefault" />
-		<module name="RedundantThrows" />
+		<module name="RedundantThrows">
+			<!-- allow throws Unchecked Exception and Subclass Of Another Declared Exception -->
+			<property name="allowUnchecked" value="true" />
+			<property name="allowSubclasses" value="true" />
+		</module>
 		<module name="SimplifyBooleanExpression" />
 		<module name="SimplifyBooleanReturn" />
 
@@ -144,13 +150,16 @@
 		<module name="FinalClass" />
 		<module name="HideUtilityClassConstructor" />
 		<module name="InterfaceIsType" />
-		<module name="VisibilityModifier" />
+		<module name="VisibilityModifier">
+			<property name="protectedAllowed" value="true" />
+			<property name="packageAllowed" value="true" />
+		</module>
 
 
 		<!-- Miscellaneous other checks. -->
 		<!-- See http://checkstyle.sf.net/config_misc.html -->
 		<module name="ArrayTypeStyle" />
-		<!-- <module name="FinalParameters" /> -->
+		<module name="FinalParameters" />
 		<module name="TodoComment" />
 		<module name="UpperEll" />
 

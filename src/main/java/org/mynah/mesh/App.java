@@ -1,14 +1,36 @@
+/**
+ * Copyright (c) 2012 Lamb <lambgao@me.com>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package org.mynah.mesh;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 /**
  * Hello world!
  */
 public final class App {
 
+    /** Logger available to subclasses. */
+    protected final Log logger = LogFactory.getLog(getClass());
+
     /**
-     * Utility classes should not have a public or default constructor.
+     * App log :-).
      */
-    private App() {
+    public void log() {
+        logger.info("This is a message.");
     }
 
     /**
@@ -17,7 +39,8 @@ public final class App {
      * @param args
      *            inupt args
      */
-    public static void main(String[] args) {
-        // TODO AXXX
+    public static void main(final String[] args) {
+        App app = new App();
+        app.log();
     }
 }
