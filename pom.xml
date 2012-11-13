@@ -66,6 +66,7 @@
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>${version.poi-ooxml}</version>
+			<scope>compile</scope>
 		</dependency>
 		<!-- Logging -->
 		<dependency>
