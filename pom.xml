@@ -140,6 +140,9 @@
 				<configuration>
 					<header>${file.license}</header>
 					<strictCheck>true</strictCheck>
+					<mapping>
+                        <txt>JAVADOC_STYLE</txt>
+                    </mapping>
 					<properties>
 						<year>${project.inceptionYear}</year>
 						<owner>${owner.name}</owner>

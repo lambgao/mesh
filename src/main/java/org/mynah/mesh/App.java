@@ -27,20 +27,16 @@ public final class App {
     protected final Log logger = LogFactory.getLog(getClass());
 
     /**
-     * App log :-).
+     * Construct a new App.
      */
-    public void log() {
-        logger.info("This is a message.");
+    public App() {
     }
 
     /**
-     * App main :-).
-     * 
-     * @param args
-     *            inupt args
+     * App log :-).
      */
-    public static void main(final String[] args) {
-        App app = new App();
-        app.log();
+    public void log() {
+        this.logger.info("This is a message.");
     }
+
 }
