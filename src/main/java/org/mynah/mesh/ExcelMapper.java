@@ -19,7 +19,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 /**
- * ExcelMapper
+ * ExcelMapper.
  */
 public final class ExcelMapper {
 
