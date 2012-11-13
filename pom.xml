@@ -150,11 +150,6 @@
 						<java>SLASHSTAR_STYLE</java>
 						<txt>SLASHSTAR_STYLE</txt>
 					</mapping>
-					<properties>
-						<year>${project.inceptionYear}</year>
-						<owner>${owner.name}</owner>
-						<email>${owner.email}</email>
-					</properties>
 					<encoding>${project.build.sourceEncoding}</encoding>
 					<excludes>
 						<exclude>**/etc/*</exclude>
