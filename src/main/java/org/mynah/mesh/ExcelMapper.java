@@ -19,17 +19,17 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 /**
- * Hello world!
+ * ExcelMapper
  */
-public final class App {
+public final class ExcelMapper {
 
     /** Logger available to subclasses. */
     protected final Log logger = LogFactory.getLog(getClass());
 
     /**
-     * Construct a new App.
+     * Construct a new ExcelMapper for usage..
      */
-    public App() {
+    public ExcelMapper() {
     }
 
     /**
