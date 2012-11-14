@@ -67,9 +67,12 @@
 
 
 		<!-- Checks for imports -->
-		<!-- See http://checkstyle.sf.net/config_import.html -->
+		<!-- See http://checkstyle.sf.net/config_imports.html -->
 		<module name="AvoidStarImport" />
-		<module name="AvoidStaticImport" />
+		<module name="AvoidStaticImport">
+			<property name="excludes" value="java.lang.annotation.ElementType.*" />
+			<property name="excludes" value="java.lang.annotation.RetentionPolicy.*" />
+		</module>
 		<module name="IllegalImport" /> <!-- defaults to sun.* packages -->
 		<module name="RedundantImport" />
 		<module name="UnusedImports" />
