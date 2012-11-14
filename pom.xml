@@ -165,6 +165,7 @@
 						<exclude>**/etc/*</exclude>
 						<exclude>**/*.gitignore</exclude>
 						<exclude>**/README.md</exclude>
+						<exclude>**/src/test/**/*.xml</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
