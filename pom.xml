@@ -19,6 +19,8 @@
 		<version.cobertura-maven-plugin>2.5.2</version.cobertura-maven-plugin>
 		<version.maven-javadoc-plugin>2.9</version.maven-javadoc-plugin>
 		<version.maven-license-plugin>1.9.0</version.maven-license-plugin>
+		<!-- Bean Validation (JSR-303) -->
+		<version.validation-api>1.0.0.GA</version.validation-api>
 		<!-- Third Party dependencies -->
 		<version.poi-ooxml>3.7</version.poi-ooxml>
 		<!-- Logging -->
@@ -61,6 +63,13 @@
 	</issueManagement>
 
 	<dependencies>
+		<!-- Bean Validation (JSR-303) -->
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>${version.validation-api}</version>
+			<scope>compile</scope>
+		</dependency>
 		<!-- Third Party dependencies -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
