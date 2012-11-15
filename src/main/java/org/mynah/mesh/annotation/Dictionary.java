@@ -26,22 +26,17 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
 /**
- * 标识这个字段需要和Excel中的数据列做映射.
+ * 标识这个字段需要做字典转换.
  * 
  * @author Lamb
  */
 @Target({ METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER })
 @Retention(RUNTIME)
 @Documented
-public @interface Excel {
+public @interface Dictionary {
 
     /**
-     * 这个值是与Excel中数据列的索引.
+     * 这个值是字典名.
      */
-    int column() default 0;
-
-    /**
-     * 这个值是数据列的标题.
-     */
-    String title();
+    String value();
 }

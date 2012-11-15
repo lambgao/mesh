@@ -2,4 +2,25 @@
 <mesh-configuration>
 	<!-- Enable annotation -->
 	<!-- <annotation-driven /> -->
+	<dictionarys>
+		<dictionary name="type">
+			<map key="钣金" value="23171001" />
+			<map key="机电" value="23171002" />
+			<map key="油漆" value="23171003" />
+			<map key="保养" value="23171004" />
+		</dictionary>
+		<dictionary name="isValid">
+			<map key="是" value="true" />
+			<map key="否" value="false" />
+		</dictionary>
+	</dictionarys>
+	<headers>
+		<header name="default">
+			说明：
+			1.如果导入的数据有任何的地方不符合要求，导入过程将无法进行。
+			2.请勿改变此模板，否则会引起导入错误。
+			3.带*号的字段为必填字段
+			4.每个字段后面都有相应的最大位数请在填写字段时不要超过最大位数.
+		</header>
+	</headers>
 </mesh-configuration>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mesh-mapping>
-	<class name="org.mynah.mesh.model.TmItem">
+	<sheet index="0" title="维修项目导入" header="default">
 		<property name="id" column="0" title="编号">
 			<NotNull />
 		</property>
@@ -8,11 +8,26 @@
 			<Max>500</Max>
 			<Min>10</Min>
 		</property>
-		<property name="type" column="2" title="类型" /><!-- 需要转化 23171001钣金/23171002机电/23171003油漆/23171004保养 -->
-		<property name="score" column="3" title="分数" /><!-- 需要校验位数 而且不能超长 -->
-		<property name="labourHour" column="4" title="工时" /><!-- 需要校验位数 而且不能超长 -->
-		<property name="status" column="5" title="是否有效" /><!-- 需要转化 是true/否false -->
-		<property name="content" column="6" title="内容" maxlength="2000" minlength="100" /><!--中文的按3个字符,pattern 最好可以支持正则表达式可以校验一些email之类的 -->
+		<property name="type" column="2" title="类型">
+			<!-- 需要转化 23171001钣金/23171002机电/23171003油漆/23171004保养 -->
+			<dictionary>type</dictionary>
+		</property>
+		<property name="score" column="3" title="分数">
+			<!-- 需要校验位数 而且不能超长 -->
+			<digits fraction="3" integer="2" />
+		</property>
+		<property name="labourHour" column="4" title="工时">
+			<!-- 需要校验位数 而且不能超长 -->
+			<digits fraction="5" integer="5" />
+		</property>
+		<property name="status" column="5" title="是否有效">
+			<!-- 需要转化 是true/否false -->
+			<dictionary>isValid</dictionary>
+		</property>
+		<property name="content" column="6" title="内容" maxlength="2000" minlength="100">
+			<!--中文的按3个字符,pattern 最好可以支持正则表达式可以校验一些email之类的 -->
+			<size max="2000" min="100" />
+		</property>
 		<property name="createDate" column="7" title="创建时间" />
-	</class>
+	</sheet>
 </mesh-mapping>

@@ -25,21 +25,41 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.TimeZone;
 import java.util.Currency;
-
-import org.mynah.mesh.annotation.Excel;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import org.mynah.mesh.annotation.Dictionary;
+import org.mynah.mesh.annotation.Cell;
 
 public class TmItem {
-    @Excel(column = 0, title = "编号")
+    @Cell(column = 0, title = "编号")
+    @NotNull
     private Long id;
     private Short itemId;
+    @Cell(column = 1, title = "数量")
+    @Max(500)
+    @Min(10)
     private Integer amount;
+    @Cell(column = 2, title = "类型")
+    @Dictionary("type")
     private Integer type;
+    @Cell(column = 3, title = "分数")
+    @Digits(fraction = 3, integer = 2)
     private Float score;
+    @Cell(column = 4, title = "工时")
+    @Digits(fraction = 5, integer = 5)
     private Double labourHour;
     private Character character;
+    @Cell(column = 5, title = "是否有效")
+    @Dictionary("isValid")
     private Boolean status;
-    private Byte bytes;
+    private Byte byteData;
+    @Cell(column = 6, title = "内容")
+    @Size(max = 2000, min = 100)
     private String content;
+    @Cell(column = 7, title = "创建时间")
     private Date createDate;
     private BigDecimal bigDecimal;
     private byte[] byteArray;
@@ -117,12 +137,12 @@ public class TmItem {
         this.status = status;
     }
 
-    public Byte getBytes() {
-        return bytes;
+    public Byte getByteData() {
+        return byteData;
     }
 
-    public void setBytes(Byte bytes) {
-        this.bytes = bytes;
+    public void setByteData(Byte byteData) {
+        this.byteData = byteData;
     }
 
     public String getContent() {
