@@ -32,7 +32,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.mynah.mesh.annotation.Dictionary;
 import org.mynah.mesh.annotation.Cell;
+import org.mynah.mesh.annotation.Sheet;
 
+@Sheet(header = "default", index = 0, title = "维修项目导入")
 public class TmItem {
     @Cell(column = 0, title = "编号")
     @NotNull
